@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Sacramento&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#b3eaff
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#002d3f;
+  }
+
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Montserrat;
+    background-color: #ececec;
+}
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-header {
+    position: fixed;
+    z-index: 3;
+    top: 0px; left: 0px;
+    height: 7vh; width: 100%;
+    background-color:#000000;
+}
+#main-header h1 {
+    color: #b3eaff;
+}
+#main-header h1 span {
+    font-family: 'Cookie', cursive;
+    font-weight: 200;
+    font-size: 30px;
+    color: #e4f7ff;
+}
+
+#main-image {
+    position: relative;
+    width: 100%;
+    background-color: #002d3f;
+}
+#main-image h2 {
+    position: absolute;
+    color: white;
+    font-size: 50pt;
+    line-height: 1.5em;
+    letter-spacing: 0.2rem;
+    z-index: 2;
+    font-weight: bold;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: vir 2s ease-out;
+}
+#main-image img {
+    height: 100vh;
+    opacity: 0.5;
+    position: relative;
+}
+@keyframes vir {
+    from {
+        left: 0;   
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+.slide {
+    width: 100vw; height: 100vh;
+}
+#transition {
+    background-color: black;
+    height: 30vh;
+    flex-direction: column;
+    position: relative;
+}
+#transition .line {
+    width: 80%;
+    border: 1px solid white;
+}
+#transition .ball {
+    width: 20px; height: 20px;
+    border-radius: 100%;
+    border: 2px solid white;
+    position: absolute;
+    background-color: black;
+    left: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+#transition .text {
+    color: white;
+    padding-bottom: 20px;
+    font-size: 20pt;
+}
+
+#mid-section #bio {
+
+}
+#mid-section #bio header {
+    height: 30vh;
+}
+#mid-section #bio header h4 {
+    font-size: 50pt;
+    background: #ececec;
+    padding: 0 20px;
+}
+#mid-section #bio header .line {
+    position: absolute;
+    width: 60%;
+    max-width: 700px;
+    border: 4px solid black;
+    z-index: -1;
+    transition: 1s linear;
+}
+#mid-section #bio header h4:hover + .line {
+    width: 300px;
+}
+#info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sec-img {
+    margin-bottom: 30px;
+}
+.sec {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-direction: column;
+    width: 80%;
+    max-width: 600px;
+    padding: 0 100px;
+    height: 500px;
+}
+#mid-section #bio .sec .sec-title {
+    font-size: 20pt;
+    margin-bottom: 20px;
+}
+#mid-section #bio .sec .sec-text {
+    font-size: 13pt;
+    line-height: 1.5em;
+}
+#contato {
+    position: relative;    
+    z-index: 0;
+    opacity: 1;
+    background-color: #2e2e2e;
+}
+#contato::before {
+    content: "";
+    background-image: url(./galaxy.jfif);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+}
+#contato header {
+    height: 40%;
+}
+#contato-title  {
+    font-size: 50pt;
+    color:#b3eaff;
+    z-index: 3;
+}
+#email {
+    color: pink;
+    font-size: 40pt;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 900px) {
+    #info {
+        flex-direction: column;
+    }
+    .sec {
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 700px) {
+    #main-image h2 {
+        font-size: 25pt;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #mid-section #bio .sec .sec-text {
+        font-size: 10pt;
+        line-height: 1.5em;
+    }
+    #mid-section #bio .sec .sec-title {
+        font-size: 13pt;
+    }
+    #mid-section #bio header h4 {
+        font-size: 30pt;
+        background: #ececec;
+        padding: 0 20px;
+    }
+
+    #main-header h1 {
+        font-size: 25px;
+    }
+    #main-header h1 span {
+        font-size: 20px;
+    }
+    #transition .text {
+        font-size: 15pt;
+    }
+    
+}
